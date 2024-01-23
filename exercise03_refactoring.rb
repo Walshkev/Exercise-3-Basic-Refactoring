@@ -1,3 +1,7 @@
+# kevin walsh 
+#cs 362
+#exercise 3
+
 class IceBoxRefrigerator
 
   attr_reader :height, :width, :depth
@@ -42,9 +46,13 @@ class Kitchen
     @refrigerator = refrigerator
   end
 
-  def add_bevy_to_refrigerator(bevy)
-    @refrigerator.add(bevy)
+  def add_beer_to_refrigerator
+    add_bevy_to_fridge(RootBeer.new)
   end
+
+  def add_bevy_to_fridge(bevy)
+    @refrigerator.add(bevy)
+  end 
 
   def find_volume_gallons 
     fridge_volume = @refrigerator.height * @refrigerator.width * @refrigerator.depth
